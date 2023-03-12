@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class BootCollisionDetection : MonoBehaviour
 {
-    private Rigidbody2D rb;
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
