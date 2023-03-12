@@ -21,7 +21,6 @@ public class BordersPositioning : MonoBehaviour
         Vector3 leftBorderPosition = leftBorder.transform.position;
         leftBorderPosition.x = field.transform.localScale.x / -2 - leftBorder.transform.localScale.x / 2;
         leftBorder.transform.position = leftBorderPosition;
-        print(leftBorderPosition);
     }
 
     private void SetRightBorderPosition()
