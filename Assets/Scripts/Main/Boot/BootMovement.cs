@@ -16,7 +16,7 @@ public class BootMovement : MonoBehaviour
         {
             isDragging = true;
             Vector3 touchPosition = Input.GetTouch(0).position;
-            touchPosition.z = 10; // Set a z value for the touch position
+            touchPosition.z = 10;
             Vector3 worldTouchPosition = Camera.main.ScreenToWorldPoint(touchPosition);
             Vector3 offset = worldTouchPosition - transform.position;
             targetPosition = worldTouchPosition - offset.normalized * GetComponent<Renderer>().bounds.extents.magnitude;
@@ -53,7 +53,7 @@ public class BootMovement : MonoBehaviour
         if (Input.touchCount > 0)
         {
             Vector3 touchPosition = Input.GetTouch(0).position;
-            touchPosition.z = 10; // Set a z value for the touch position
+            touchPosition.z = 10;
             Vector3 curPosition = Camera.main.ScreenToWorldPoint(touchPosition) + offset;
             transform.position = curPosition;
         }

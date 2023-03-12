@@ -11,12 +11,12 @@ public class FitToField : MonoBehaviour
         float screenRatio = (float)Screen.width / (float)Screen.height;
         float targetRatio = fieldSpriteRenderer.bounds.size.x / fieldSpriteRenderer.bounds.size.y;
 
-        if(screenRatio >= targetRatio) // big devices (tablets and iPads)
+        if(screenRatio >= targetRatio)
         {
             Camera.main.backgroundColor = Color.black;
             Camera.main.orthographicSize = fieldSpriteRenderer.bounds.size.y / 2;
         }
-        else // small devices
+        else
         {
             Camera.main.backgroundColor = fieldSpriteRenderer.color;
             float differenceInSize = targetRatio / screenRatio;
