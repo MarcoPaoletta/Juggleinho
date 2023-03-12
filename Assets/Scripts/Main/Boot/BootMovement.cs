@@ -5,6 +5,7 @@ using UnityEngine;
 public class BootMovement : MonoBehaviour
 {
     private float speed = 5f;
+    private float rotationSpeed = 15f;
     private bool isDragging = false;
     private Vector3 targetPosition;
     private Vector3 screenPoint;
@@ -58,19 +59,7 @@ public class BootMovement : MonoBehaviour
             transform.position = curPosition;
             
             // Rotate the object based on the touch movement
-            float rotateSpeed = 10f;
-            float rotateAmount = Input.GetTouch(0).deltaPosition.x * rotateSpeed * Time.deltaTime;
-            transform.Rotate(Vector3.forward, rotateAmount, Space.World);
-        }
-        else if (Input.GetMouseButton(0))
-        {
-            Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
-            Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
-            transform.position = curPosition;
-            
-            // Rotate the object based on the mouse movement
-            float rotateSpeed = 10f;
-            float rotateAmount = Input.GetAxis("Mouse X") * rotateSpeed * Time.deltaTime;
+            float rotateAmount = Input.GetTouch(0).deltaPosition.x * rotationSpeed * Time.deltaTime;
             transform.Rotate(Vector3.forward, rotateAmount, Space.World);
         }
     }
