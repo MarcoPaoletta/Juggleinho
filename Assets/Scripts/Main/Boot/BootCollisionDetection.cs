@@ -22,7 +22,7 @@ public class BootCollisionDetection : MonoBehaviour
             direction = direction.normalized;
 
             // Apply a force to the colliding object
-            float impulseForce = 7f;
+            float impulseForce = 10f;
             collidingRb.AddForce(direction * impulseForce, ForceMode2D.Impulse);
         }
     }   
