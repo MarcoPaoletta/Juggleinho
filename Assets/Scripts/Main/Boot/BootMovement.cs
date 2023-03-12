@@ -5,7 +5,6 @@ using UnityEngine;
 public class BootMovement : MonoBehaviour
 {
     private float speed = 5f;
-    private float rotationSpeed = 15f;
     private bool isDragging = false;
     private Vector3 targetPosition;
     private Vector3 screenPoint;
@@ -57,10 +56,6 @@ public class BootMovement : MonoBehaviour
             touchPosition.z = 10; // Set a z value for the touch position
             Vector3 curPosition = Camera.main.ScreenToWorldPoint(touchPosition) + offset;
             transform.position = curPosition;
-            
-            // Rotate the object based on the touch movement
-            float rotateAmount = Input.GetTouch(0).deltaPosition.x * rotationSpeed * Time.deltaTime;
-            transform.Rotate(Vector3.forward, rotateAmount, Space.World);
         }
     }
 
