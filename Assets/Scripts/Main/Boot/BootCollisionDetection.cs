@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BootCollisionDetection : MonoBehaviour
 {
-    private float impulseForce = 8.5f;
+    private float impulseForce = 7.5f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
