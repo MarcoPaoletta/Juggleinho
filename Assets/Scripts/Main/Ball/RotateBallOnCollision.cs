@@ -12,7 +12,6 @@ public class RotateBallOnCollision : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Boot") || other.gameObject.CompareTag("Border"))
         {
-            print("Collided");
             float torque = rb.velocity.magnitude * rotationSpeed;
             rb.AddTorque(torque);
         }
