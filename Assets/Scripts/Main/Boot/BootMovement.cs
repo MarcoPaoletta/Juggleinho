@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BootMovement : MonoBehaviour
 {
-    public float speed = 5f;
+    private float speed = 5f;
     private bool isDragging = false;
     private Vector3 targetPosition;
     private Vector3 screenPoint;
