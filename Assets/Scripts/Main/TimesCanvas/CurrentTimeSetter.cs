@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TimesCanvas : MonoBehaviour
+public class CurrentTimeSetter : MonoBehaviour
 {
     [SerializeField] private Text currentTimeText;
-    [SerializeField] private Text bestTimeText;
 
     private float currentTimeInSeconds;
 
