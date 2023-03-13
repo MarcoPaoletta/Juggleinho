@@ -7,7 +7,7 @@ public class StartGameManager : MonoBehaviour
 {
     private void Update()
     {
-        if(Input.touchCount > 0)
+        if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             SceneManager.LoadScene("Main");
         }

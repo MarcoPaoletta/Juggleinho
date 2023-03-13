@@ -9,7 +9,7 @@ public class DeadZoneCollisionDetection : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Ball"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("Lobby");
         }      
     }
 }
