@@ -5,6 +5,7 @@ using UnityEngine;
 public class BallSpawnerManager : MonoBehaviour
 {
     [SerializeField] private GameObject ball;
+    [SerializeField] private CurrentTimeSetter currentTimeSetterScript;
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public class BallSpawnerManager : MonoBehaviour
 
     public void CheckBallSpawning()
     {
-        if(CurrentTimeSetter.currentTimeInSeconds % 10 == 0 && CurrentTimeSetter.currentTimeInSeconds != 0)
+        if(currentTimeSetterScript.currentTimeInSeconds % 10 == 0 && currentTimeSetterScript.currentTimeInSeconds != 0)
         {
             SpawnBall();
         }

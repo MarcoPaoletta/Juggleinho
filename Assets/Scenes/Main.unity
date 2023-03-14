@@ -300,6 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eb6bb5f2183c0946b85c93e1c93906d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentTimeInSeconds: 0
   currentTimeText: {fileID: 201043271}
   ballSpawnerManagerScript: {fileID: 421235393}
 --- !u!1 &365021106
@@ -458,6 +459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 1582956243644536069, guid: a396530fe92354e41b4a51558d780794, type: 3}
+  currentTimeSetterScript: {fileID: 201043273}
 --- !u!1 &497112303
 GameObject:
   m_ObjectHideFlags: 0
