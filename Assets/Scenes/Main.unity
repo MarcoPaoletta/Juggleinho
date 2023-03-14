@@ -301,6 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTimeText: {fileID: 201043271}
+  ballSpawnerManagerScript: {fileID: 421235393}
 --- !u!1 &365021106
 GameObject:
   m_ObjectHideFlags: 0

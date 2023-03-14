@@ -15,4 +15,12 @@ public class BallSpawnerManager : MonoBehaviour
     {
         Instantiate(ball, Vector3.zero, Quaternion.identity);
     }
+
+    public void CheckBallSpawning()
+    {
+        if(CurrentTimeSetter.currentTimeInSeconds % 10 == 0 && CurrentTimeSetter.currentTimeInSeconds != 0)
+        {
+            SpawnBall();
+        }
+    }
 }

@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class CurrentTimeSetter : MonoBehaviour
 {
-    [SerializeField] private Text currentTimeText;
+    public static float currentTimeInSeconds;
 
-    private float currentTimeInSeconds;
+    [SerializeField] private Text currentTimeText;
+    [SerializeField] private BallSpawnerManager ballSpawnerManagerScript;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class CurrentTimeSetter : MonoBehaviour
     {
         currentTimeInSeconds += 1;
         UpdateCurrentTimeText();
+        ballSpawnerManagerScript.CheckBallSpawning();
     }
 
     private void UpdateCurrentTimeText()
