@@ -153,9 +153,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballRotationScript: {fileID: 1582956243644536079}
   rb: {fileID: 1582956243644536074}
-  ballLayerMask:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!96 &1582956243644536076
 TrailRenderer:
   serializedVersion: 2
