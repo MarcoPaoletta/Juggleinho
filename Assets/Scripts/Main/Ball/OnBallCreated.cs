@@ -5,10 +5,7 @@ using UnityEngine;
 public class OnBallCreated : MonoBehaviour
 {
     [SerializeField] private BallRotation ballRotationScript;
-
-    [Header("Components")]
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private CircleCollider2D circleCollider;
 
     private float impulseForce = 20;
 
@@ -17,12 +14,12 @@ public class OnBallCreated : MonoBehaviour
         SetPosition();
         ApplyImpulse();
         ballRotationScript.AddRotation();
-        Invoke("EnableCollider", 1f);
+        Invoke("EnableDeadZone", 1f);
     }
 
     private void SetPosition()
     {
-        float ballPositionX = Random.Range(-1.5f, 1.5f);
+        float ballPositionX = Random.Range(-1.35f, -1.35f);
         float ballPositionY = -5.5f;
         Vector3 ballPosition = new Vector3(ballPositionX, ballPositionY, 0);
         transform.position = ballPosition;
@@ -30,11 +27,14 @@ public class OnBallCreated : MonoBehaviour
 
     private void ApplyImpulse()
     {
-        rb.AddForce(new Vector2(.05f, 1) * impulseForce, ForceMode2D.Impulse);
+        float impulseX = Random.Range(-.5f, .5f);
+        float impulseY = Random.Range(1f, 1.2f);
+        Vector2 impulse = new Vector2(impulseX, impulseY);
+        rb.AddForce(impulse * impulseForce, ForceMode2D.Impulse);
     }
 
-    private void EnableCollider()
+    private void EnableDeadZone()
     {
-        circleCollider.enabled = true;
+        gameObject.layer = 8;
     }
 }

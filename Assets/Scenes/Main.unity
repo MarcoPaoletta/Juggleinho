@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 365021107}
   - component: {fileID: 365021108}
   - component: {fileID: 365021109}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftBorder
   m_TagString: Border
   m_Icon: {fileID: 0}
@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 497112307}
   - component: {fileID: 497112309}
   - component: {fileID: 497112310}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boot
   m_TagString: Boot
   m_Icon: {fileID: 0}
@@ -828,7 +828,7 @@ GameObject:
   - component: {fileID: 1064632108}
   - component: {fileID: 1064632110}
   - component: {fileID: 1064632109}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightBorder
   m_TagString: Border
   m_Icon: {fileID: 0}
@@ -1107,7 +1107,7 @@ GameObject:
   - component: {fileID: 1555014555}
   - component: {fileID: 1555014557}
   - component: {fileID: 1555014556}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeadZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
