@@ -6,7 +6,7 @@ public class BallRotation : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
 
-    private float rotationSpeed = 3f;
+    private float rotationSpeed = 5f;
 
     public void AddRotation()
     {
