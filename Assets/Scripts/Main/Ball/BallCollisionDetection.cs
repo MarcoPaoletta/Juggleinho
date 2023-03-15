@@ -17,7 +17,7 @@ public class BallCollisionDetection : MonoBehaviour
         {
             rb.AddForce(forceDirection * bootImpulseForce, ForceMode2D.Impulse);
             gameObject.layer = 3;
-            Invoke("EnableCanCollideWithBall", 1.2f);
+            Invoke("EnableCanCollideWithBall", .3f);
         }
 
         if(collision.gameObject.CompareTag("Border"))
