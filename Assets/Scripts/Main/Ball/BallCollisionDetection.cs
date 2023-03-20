@@ -13,7 +13,7 @@ public class BallCollisionDetection : MonoBehaviour
     {
         Vector3 forceDirection = collision.contacts[0].normal;
 
-        if(collision.gameObject.CompareTag("Boot"))
+        if(collision.gameObject.CompareTag("Player"))
         {
             rb.AddForce(forceDirection * bootImpulseForce, ForceMode2D.Impulse);
             gameObject.layer = 3;

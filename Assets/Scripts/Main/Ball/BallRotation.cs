@@ -16,7 +16,7 @@ public class BallRotation : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Boot") || other.gameObject.CompareTag("Border"))
+        if(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Border"))
         {
             AddRotation();
         }
