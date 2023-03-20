@@ -6,7 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
 
-    private float speed = 10f;
+    private float moveInput;
+    private float speed = 6f;
     private float minPositionX = -2.25f;
     private float maxPositionX = 2.25f;
 
@@ -18,7 +19,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed, rb.velocity.y);
+        if(Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            Vector3 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+            touchPosition.z = 0f;
+            Vector3 playerPosition = transform.position;
+            playerPosition.x = touchPosition.x;
+            transform.position = playerPosition;
+        }
     }
 
     private void ClampPosition()
