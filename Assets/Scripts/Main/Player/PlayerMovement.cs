@@ -13,16 +13,10 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         Move();
-        ClampPosition();
     }
 
     private void Move()
     {
         rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed, rb.velocity.y);
-    }
-
-    private void ClampPosition()
-    {
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, minPositionX, maxPositionX), transform.position.y, transform.position.z);
     }
 }
