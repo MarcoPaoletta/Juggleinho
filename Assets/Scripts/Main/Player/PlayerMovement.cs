@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
 
     private float speed = 10f;
+    private float minPositionX = -2.25f;
+    private float maxPositionX = 2.25f;
 
     private void Update()
     {
