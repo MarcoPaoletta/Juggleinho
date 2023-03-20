@@ -16,8 +16,6 @@ public class BallCollisionDetection : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             rb.AddForce(forceDirection * bootImpulseForce, ForceMode2D.Impulse);
-            gameObject.layer = 3;
-            Invoke("EnableCanCollideWithBall", .3f);
         }
 
         if(collision.gameObject.CompareTag("Border"))
@@ -25,9 +23,4 @@ public class BallCollisionDetection : MonoBehaviour
             rb.AddForce(forceDirection * borderImpulseForce, ForceMode2D.Impulse);
         }
     } 
-
-    private void EnableCanCollideWithBall()
-    {
-        gameObject.layer = 8;
-    }
 }
