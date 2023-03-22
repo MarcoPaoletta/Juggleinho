@@ -14,7 +14,7 @@ public class OnBallCreated : MonoBehaviour
         SetPosition();
         ApplyImpulse();
         ballRotationScript.AddRotation();
-        Invoke("EnableDeadZone", 1f);
+        Invoke("EnableDeadZone", 1.5f);
     }
 
     private void SetPosition()
@@ -29,8 +29,8 @@ public class OnBallCreated : MonoBehaviour
     {
         float impulseX = Random.Range(-.5f, .5f);
         float impulseY = Random.Range(1f, 1.2f);
-        Vector2 impulse = new Vector2(impulseX, impulseY);
-        rb.AddForce(impulse * impulseForce, ForceMode2D.Impulse);
+        Vector2 impulseDirection = new Vector2(impulseX, impulseY);
+        rb.AddForce(impulseDirection * impulseForce, ForceMode2D.Impulse);
     }
 
     private void EnableDeadZone()
