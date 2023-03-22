@@ -7,7 +7,7 @@ public class BallCollisionDetection : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
 
     private float bootImpulseForce = 18f;
-    private float borderImpulseForce = 2.5f;
+    private float borderImpulseForce = 2.75f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
