@@ -19,7 +19,7 @@ public class BallSpawnerManager : MonoBehaviour
 
     public void CheckBallSpawning()
     {
-        if(currentTimeSetterScript.currentTimeInSeconds % 10 == 0 && currentTimeSetterScript.currentTimeInSeconds != 0)
+        if(currentTimeSetterScript.currentTimeInSeconds == 5 || currentTimeSetterScript.currentTimeInSeconds % 10 == 0 && currentTimeSetterScript.currentTimeInSeconds != 0)
         {
             SpawnBall();
         }
