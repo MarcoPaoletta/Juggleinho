@@ -7,6 +7,8 @@ public class BallCollisionDetection : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
 
     private float bootImpulseForce = 18f;
+    private float bootXMultiplier;
+
     private float borderImpulseForce = 2.75f;
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -15,7 +17,28 @@ public class BallCollisionDetection : MonoBehaviour
 
         if(collision.gameObject.CompareTag("Player"))
         {
-            rb.AddForce(forceDirection * bootImpulseForce, ForceMode2D.Impulse);
+            if(forceDirection.x == 0)
+            {
+                int random = Random.Range(1, 3);
+
+                if(random == 1)
+                {
+                    bootXMultiplier = Random.Range(0.5f, 0.7f);
+                }
+
+                if(random == 2)
+                {
+                    bootXMultiplier = Random.Range(-0.7f, -0.5f);
+                }
+
+                Vector2 forceToApply = new Vector2(forceDirection.x * bootXMultiplier * bootImpulseForce, forceDirection.y * bootImpulseForce);
+                rb.AddForce(forceToApply, ForceMode2D.Impulse);
+            }
+            
+            else
+            {
+                rb.AddForce(forceDirection * bootImpulseForce, ForceMode2D.Impulse);
+            }
         }
 
         if(collision.gameObject.CompareTag("Border"))
