@@ -23,12 +23,12 @@ public class BallCollisionDetection : MonoBehaviour
 
                 if(random == 1)
                 {
-                    bootXMultiplier = Random.Range(0.5f, 0.7f);
+                    bootXMultiplier = Random.Range(0.7f, 1f);
                 }
 
                 if(random == 2)
                 {
-                    bootXMultiplier = Random.Range(-0.7f, -0.5f);
+                    bootXMultiplier = Random.Range(-1f, -0.7f);
                 }
 
                 Vector2 forceToApply = new Vector2(forceDirection.x * bootXMultiplier * bootImpulseForce, forceDirection.y * bootImpulseForce);
