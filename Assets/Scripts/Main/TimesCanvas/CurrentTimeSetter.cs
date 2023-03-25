@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CurrentTimeSetter : MonoBehaviour
 {
-    [HideInInspector] public float currentTimeInSeconds;
+    [HideInInspector] public int currentTimeInSeconds;
 
     [SerializeField] private Text currentTimeText;
     [SerializeField] private BallSpawnerManager ballSpawnerManagerScript;

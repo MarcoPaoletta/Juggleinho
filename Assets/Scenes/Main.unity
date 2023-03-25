@@ -738,6 +738,7 @@ GameObject:
   - component: {fileID: 610625330}
   - component: {fileID: 610625332}
   - component: {fileID: 610625331}
+  - component: {fileID: 610625333}
   m_Layer: 5
   m_Name: BestTimeText
   m_TagString: Untagged
@@ -807,6 +808,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610625329}
   m_CullTransparentMesh: 1
+--- !u!114 &610625333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610625329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcd230a88bc404f458e36040e6411cc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bestTime: 0
+  bestTimeText: {fileID: 610625331}
+  currentTimeSetterScript: {fileID: 201043273}
 --- !u!1 &699996885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,6 +1283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b0617c07463d94bb21ccc0a0010e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bestTimeSetterScript: {fileID: 610625333}
 --- !u!68 &1555014557
 EdgeCollider2D:
   m_ObjectHideFlags: 0
