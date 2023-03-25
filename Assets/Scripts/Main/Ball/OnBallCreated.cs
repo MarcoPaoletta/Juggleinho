@@ -27,7 +27,7 @@ public class OnBallCreated : MonoBehaviour
 
     private void ApplyImpulse()
     {
-        float impulseX = Random.Range(-.5f, .5f);
+        float impulseX = Random.Range(-.2f, .2f);
         float impulseY = Random.Range(1f, 1.2f);
         Vector2 impulseDirection = new Vector2(impulseX, impulseY);
         rb.AddForce(impulseDirection * impulseForce, ForceMode2D.Impulse);
