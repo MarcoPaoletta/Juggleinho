@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 129366568}
   - component: {fileID: 129366567}
   m_Layer: 0
-  m_Name: Field
+  m_Name: Pitch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,8 +181,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.6792453, g: 0.62228286, b: 0.5344251, a: 1}
+  m_Sprite: {fileID: 21300000, guid: f778acaf60eeae544af0c241d6af4037, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 129366563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 10, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -309,7 +309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190116631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: -4.5, z: 0}
+  m_LocalPosition: {x: 1, y: -4.3, z: 0}
   m_LocalScale: {x: 4.5, y: 4.5, z: 7.7960854}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -388,6 +388,8 @@ GameObject:
   - component: {fileID: 201043272}
   - component: {fileID: 201043271}
   - component: {fileID: 201043273}
+  - component: {fileID: 201043275}
+  - component: {fileID: 201043274}
   m_Layer: 5
   m_Name: CurrentTimeText
   m_TagString: Untagged
@@ -412,7 +414,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.000015258789, y: -161}
+  m_AnchoredPosition: {x: 0.000015258789, y: -165}
   m_SizeDelta: {x: 527.6, y: 178}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201043271
@@ -472,6 +474,36 @@ MonoBehaviour:
   currentTimeInSeconds: 0
   currentTimeText: {fileID: 201043271}
   ballSpawnerManagerScript: {fileID: 421235393}
+--- !u!114 &201043274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201043269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+--- !u!114 &201043275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201043269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 7, y: -7}
+  m_UseGraphicAlpha: 1
 --- !u!1 &365021106
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,8 +530,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 365021106}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: 15, z: 0.7050835}
-  m_LocalScale: {x: 1, y: 40, z: 1}
+  m_LocalPosition: {x: -3.5, y: 15, z: 0.7050835}
+  m_LocalScale: {x: 2, y: 40, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1390467818}
@@ -666,7 +698,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.52156866, g: 0.7843138, b: 0.26666668, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -739,6 +771,8 @@ GameObject:
   - component: {fileID: 610625332}
   - component: {fileID: 610625331}
   - component: {fileID: 610625333}
+  - component: {fileID: 610625335}
+  - component: {fileID: 610625334}
   m_Layer: 5
   m_Name: BestTimeText
   m_TagString: Untagged
@@ -763,7 +797,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.000015258789, y: -319.7}
+  m_AnchoredPosition: {x: 0.000015258789, y: -323.69995}
   m_SizeDelta: {x: 527.6, y: 93.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &610625331
@@ -823,6 +857,36 @@ MonoBehaviour:
   bestTime: 0
   bestTimeText: {fileID: 610625331}
   currentTimeSetterScript: {fileID: 201043273}
+--- !u!114 &610625334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610625329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+--- !u!114 &610625335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610625329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 7, y: -7}
+  m_UseGraphicAlpha: 1
 --- !u!1 &699996885
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,7 +968,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699996885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: -4.5, z: 0}
+  m_LocalPosition: {x: -1, y: -4.3, z: 0}
   m_LocalScale: {x: 4.5, y: 4.5, z: 4.200531}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1018,8 +1082,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064632107}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: 15, z: 0.7050835}
-  m_LocalScale: {x: 1, y: 40, z: 1}
+  m_LocalPosition: {x: 3.5, y: 15, z: 0.7050835}
+  m_LocalScale: {x: 2, y: 40, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1390467818}

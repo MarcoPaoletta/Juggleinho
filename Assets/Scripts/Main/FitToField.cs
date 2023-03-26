@@ -13,12 +13,10 @@ public class FitToField : MonoBehaviour
 
         if(screenRatio >= targetRatio)
         {
-            Camera.main.backgroundColor = Color.black;
             Camera.main.orthographicSize = fieldSpriteRenderer.bounds.size.y / 2;
         }
         else
         {
-            Camera.main.backgroundColor = fieldSpriteRenderer.color;
             float differenceInSize = targetRatio / screenRatio;
             Camera.main.orthographicSize = fieldSpriteRenderer.bounds.size.y / 2 * differenceInSize;
         }
