@@ -659,7 +659,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9afb3f043224b74484de85d7ea2bde8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 1582956243644536069, guid: a396530fe92354e41b4a51558d780794, type: 3}
+  balls:
+  - {fileID: 1582956243644536069, guid: a396530fe92354e41b4a51558d780794, type: 3}
+  - {fileID: 1582956243644536069, guid: 983d7a2f208454f49b21b43ff90d6db9, type: 3}
+  - {fileID: 1582956243644536069, guid: d3f60dc92a593be448c7ea0f7e19c1fe, type: 3}
+  - {fileID: 1582956243644536069, guid: f4d59e0cfd532f04d880665550b6c17e, type: 3}
+  - {fileID: 1582956243644536069, guid: 4c298d7f533eed14283b6e6489026941, type: 3}
   currentTimeSetterScript: {fileID: 201043273}
 --- !u!1 &519420028
 GameObject:

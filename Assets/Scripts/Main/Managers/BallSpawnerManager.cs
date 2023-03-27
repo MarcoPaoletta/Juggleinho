@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class BallSpawnerManager : MonoBehaviour
 {
-    [SerializeField] private GameObject ball;
+    [SerializeField] private List<GameObject> balls;
     [SerializeField] private CurrentTimeSetter currentTimeSetterScript;
 
-    private int ballsAmount;
+    private int instantiatedBallsAmount;
     private int maxBallsAmount = 5;
     private bool maxBallsAmountReached;
 
@@ -18,7 +18,7 @@ public class BallSpawnerManager : MonoBehaviour
 
     public void CheckBallSpawning()
     {
-        if(currentTimeSetterScript.currentTimeInSeconds == 5 || currentTimeSetterScript.currentTimeInSeconds % 10 == 0 && currentTimeSetterScript.currentTimeInSeconds != 0 && ballsAmount < maxBallsAmount)
+        if(currentTimeSetterScript.currentTimeInSeconds == 5 || currentTimeSetterScript.currentTimeInSeconds % 10 == 0 && currentTimeSetterScript.currentTimeInSeconds != 0 && instantiatedBallsAmount < maxBallsAmount)
         {
             SpawnBall();
         }
@@ -26,7 +26,7 @@ public class BallSpawnerManager : MonoBehaviour
 
     private void SpawnBall()
     {
-        ballsAmount += 1;
-        Instantiate(ball, Vector3.zero, Quaternion.identity);
+        instantiatedBallsAmount += 1;
+        Instantiate(balls[instantiatedBallsAmount - 1], Vector3.zero, Quaternion.identity);
     }
 }
