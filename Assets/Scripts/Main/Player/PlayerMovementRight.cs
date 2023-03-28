@@ -24,25 +24,20 @@ public class PlayerMovementRight : MonoBehaviour
         {
             Touch touch = Input.touches[i];
 
-            if (touch.position.x >= Screen.width / 2)
+            if (touch.phase == TouchPhase.Began)
             {
-                if (touch.phase == TouchPhase.Began)
-                {
-                    isMouseDown = true;
-                }
-                else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
-                {
-                    isMouseDown = false;
-                }
+                isMouseDown = true;
+            }
+            else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+            {
+                isMouseDown = false;
+            }
 
-                if (isMouseDown)
-                {
-                    Vector3 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
-                    touchPosition.z = 0f;
-                    Vector3 playerPosition = transform.position;
-                    playerPosition.x = touchPosition.x;
-                    transform.position = playerPosition;
-                }
+            if (isMouseDown)
+            {
+                Vector3 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+                touchPosition.z = 0f;
+                transform.position = touchPosition;
             }
         }
     }
