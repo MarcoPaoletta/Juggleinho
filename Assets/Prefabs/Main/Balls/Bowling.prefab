@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 1582956243644536072}
   - component: {fileID: 1582956243644536074}
   - component: {fileID: 1582956243644536079}
-  - component: {fileID: 8030789801822291232}
   - component: {fileID: -4642994727778313098}
   - component: {fileID: 1582956243644536076}
   - component: {fileID: 2648361550496451010}
+  - component: {fileID: 7788917730053148144}
+  - component: {fileID: 2381742275939737753}
   m_Layer: 3
   m_Name: Bowling
   m_TagString: Ball
@@ -105,7 +106,7 @@ Rigidbody2D:
   m_Mass: 1.48
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 1.1
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -124,20 +125,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1582956243644536074}
---- !u!114 &8030789801822291232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1582956243644536069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3c6fa0918d3bfe4398a288e85a74ef1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ballRotationScript: {fileID: 1582956243644536079}
-  rb: {fileID: 1582956243644536074}
 --- !u!114 &-4642994727778313098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1582956243644536074}
+  ballLayerSetterScript: {fileID: 7788917730053148144}
 --- !u!96 &1582956243644536076
 TrailRenderer:
   serializedVersion: 2
@@ -275,3 +263,29 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.13499999
+--- !u!114 &7788917730053148144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582956243644536069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b59b1e8905355e408b86122cb9425c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2381742275939737753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582956243644536069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c41a754f0c57e5b449ca1a60e1e32f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballRotationScript: {fileID: 1582956243644536079}
+  rb: {fileID: 1582956243644536074}

@@ -10,13 +10,13 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ignore objects
   - Water
   - UI
+  - BallOnBootCooldown
+  - Ball
   - Player
   - Border
-  - Ball
-  - Ignore DeadZone
   - DeadZone
   - 
   - 

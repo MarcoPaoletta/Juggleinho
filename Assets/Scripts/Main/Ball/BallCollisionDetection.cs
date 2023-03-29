@@ -5,8 +5,9 @@ using UnityEngine;
 public class BallCollisionDetection : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private BallLayerSetter ballLayerSetterScript;
 
-    private float bootImpulseForce = 20.75f;
+    private float bootImpulseForce = 13f;
     private float borderImpulseForce = 3.8f;
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -14,7 +15,7 @@ public class BallCollisionDetection : MonoBehaviour
         Vector3 forceDirection = collision.contacts[0].normal;
 
         if(collision.gameObject.CompareTag("Player"))
-        {         
+        {  
             if(forceDirection.x == 0)
             {
                 Vector2 extraImpulseForce = new Vector2(forceDirection.x * bootImpulseForce + 5, forceDirection.y * bootImpulseForce);
@@ -24,6 +25,8 @@ public class BallCollisionDetection : MonoBehaviour
             {
                 rb.AddForce(forceDirection * bootImpulseForce, ForceMode2D.Impulse);
             }
+
+            ballLayerSetterScript.StartBootCollisionCooldown();
         }
 
         if(collision.gameObject.CompareTag("Border"))
